@@ -6,6 +6,7 @@ class DBConnection {
     constructor() {
         this.db = mysql2.createPool({
             host: process.env.DB_HOST,
+            port: process.env.DB_PORT,
             user: process.env.DB_USER,
             password: process.env.DB_PASS,
             database: process.env.DB_DATABASE
@@ -28,6 +29,7 @@ class DBConnection {
                 }
             }
             if (connection) {
+                console.log('DB connection succesful!')
                 connection.release();
             }
             return
@@ -50,7 +52,7 @@ class DBConnection {
             const mysqlErrorList = Object.keys(HttpStatusCodes);
             // convert mysql errors which in the mysqlErrorList list to http status code
             err.status = mysqlErrorList.includes(err.code) ? HttpStatusCodes[err.code] : err.status;
-
+            console.log("db error: ", err)
             throw err;
         });
     }
