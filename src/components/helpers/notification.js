@@ -6,7 +6,7 @@ const openNotification = (title,message,ok,go) => {
       description:message,
       duration: 1.5,
         icon: ok?<FcOk />:<FcCancel />,
-      onClose:go
+      onClose:typeof go === 'function' ? go : () => {}
     };
     notification.open(args);
   }
