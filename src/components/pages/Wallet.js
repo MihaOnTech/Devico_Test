@@ -30,7 +30,7 @@ function Wallet() {
   const [t,i18n] = useTranslation();
   const [idx,setIdx]=useState(0);
   const [tokens,setTokens]=useState([]);
-  const [network, setNetwork] = useState(networks[2]);
+  const [network, setNetwork] = useState(networks[0]);
   const [tokensInfo, setTokensInfo] = useState([]);
   const [loading,setLoading] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
