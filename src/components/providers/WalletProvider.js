@@ -125,7 +125,7 @@ function WalletProvider(props) {
         getTokenInfo();
     },[tokenList])
   return(
-          <WalletProviderDOM value={
+          <WalletProviderDOM value={[
             connection,
             setConnection,
             myWallet,
@@ -138,7 +138,7 @@ function WalletProvider(props) {
             tokensInfo,
             getTokenList,
             getTransaction
-          }>
+          ]}>
             {props.children}
           </WalletProviderDOM>
 

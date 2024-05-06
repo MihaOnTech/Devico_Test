@@ -311,7 +311,7 @@ class Wallet {
             }
     
             //console.log('base price', basePrice, tokenAddr, network.baseTokenAddr)
-            let {decimal} = await getTokenBaseInfo(tokenAddr, network.url);
+            let {decimal} = await routerContract.methods.getTokenBaseInfo(tokenAddr, network.url);
             let amount = await routerContract.methods.getAmountsOut(Math.pow(10,decimal)+"", [tokenAddr, network.baseTokenAddr]).call()
             //console.log('what is s', amount)
             return amount[1] / Math.pow(10, 18) * basePrice
