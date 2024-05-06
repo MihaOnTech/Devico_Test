@@ -178,3 +178,9 @@ body{
 .step-row-flex{
   flex-flow: row wrap;
 }
+
+.connect-btn {
+  background: none !important;
+  border: none !important; 
+  box-shadow: none !important; 
+}

@@ -21,6 +21,7 @@ import openNotification from "../helpers/notification";
 import WalletLoadingModal from "../component/WalletComponents/WalletLoadingModal";
 import {SERVER_URL, networks} from "../../constants/env";
 import {getTokenBaseInfo, getTokenBalance, getTokenPriceInUsd} from "../../utils/tokenUtils";
+import ConnectButton from '../component/ConnectButton';
 
 const { Paragraph } = Typography;
 const initTokenList=[
@@ -233,8 +234,9 @@ function Wallet() {
                         value={publicKey}
                         className="inline mr-2"/>
                     </Col>
-                    <Col span={14}>
+                    <Col span={14} style={{justifyContent: 'center', alignItems: 'center' }}>
                       <Paragraph copyable className="myColor1 font-bold ">{publicKey}</Paragraph>
+                      <ConnectButton />
                     </Col>
                   </Row>
 
