@@ -6,9 +6,12 @@
 - Fixed email service. Provided credentials not working. I got acces to a private domain email to open a SMTP2GO account.
 - Fixed SQL query. Missing comma on column declaration and changed top_tokens name column length to 20 to get rid of error.
 - Removed TS notation on UserProvider.
-- Changed default chain to Polygon mainnet to close loading state. Change network not working.
+- Changed default chain to Polygon mainnet to close loading state. Connection to BSC network not working.
+#### Possible Improvements
 - Lots of warnings from not used but declared vars, duplicated keys, missing hrefs....
 - UseEffect functions on Wallet.js should implement useCallback from react.
+- Should not use yarn and npm package modules, just one or the other.
+- Fix BSC chain connection
 
 ## 2. Implement web3 wallet connection
 
