@@ -4,7 +4,7 @@
 - Fixed Database Connection.
 - Removed useless import in index.html. Resource doesn't exist.
 - Fixed email service. Provided credentials not working. I got acces to a private domain email to open a SMTP2GO account.
-- Fixed SQL query. Missing comma on column declaration and changed top_tokens name column length to 20 to get rid of error.
+- Fixed new_mgldefi.sql file. Missing comma on column declaration and changed top_tokens name column length to 20 to get rid of error.
 - Removed TS notation on UserProvider.
 - Changed default chain to Polygon mainnet to close loading state. Connection to BSC network not working.
 #### Possible Improvements
